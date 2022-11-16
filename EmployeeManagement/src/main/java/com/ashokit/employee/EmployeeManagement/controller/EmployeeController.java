@@ -46,6 +46,12 @@ public class EmployeeController {
 		
 	}
 	
+	@PutMapping(path="/delete/{id}")
+	public void check(@RequestBody Employee e, @PathVariable("id") int empId){
+		 empService.updateEmployee(e,empId);
+		
+	}
+	
 	/*
 	 * @PostMapping(path="/getEmpDetails") public List<Employee> addEmpDetails(){
 	 * return empList; }
